@@ -4,5 +4,6 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
   for (i in id) {
     data <- rbind(data,read.csv(lfiles[i]))
   }
-  print(mean(data[,pollutant],na.rm=T))
+  print(round(mean(data[,pollutant],na.rm=T),digits=3))
+  
 }
