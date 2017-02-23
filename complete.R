@@ -6,7 +6,7 @@ complete <- function(directory,id=1:332) {
   }
   data <- data[complete.cases(data),] #filter to complete cases
   data <- data.frame(table(data$ID)) #count by IDs
-  colnames(data) <- c('ID','NOBS') #rename
+  colnames(data) <- c('ID','nobs') #rename
   print(data)
 }
 
